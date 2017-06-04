@@ -29,7 +29,7 @@ class TestL2Norm(TimeTestCase):
         self.CONFIGURE_UNITTEST_TIME_OUTPUT_32BIT_WORDS(1)
         self.CONFIGURE_UNITTEST_TIME_ENABLE_CYCLES(2000000)
 
-        self.UNITTEST_TIME_CONFIGURE();
+        self.UNITTEST_TIME_CONFIGURE()
 
         dout=[]
         l2norm(din, dout);
@@ -41,13 +41,13 @@ class TestL2Norm(TimeTestCase):
             self.assertEqual(ref[i], dout[i])
 
         
-        print ("CallCount (FLOAT_EQ) {0}\n").format(ASSERT_FLOAT_EQ_CALLCOUNT());
-        print ("FailureCount (FLOAT_EQ) {0}\n").format(ASSERT_FLOAT_EQ_FAILURECOUNT());
-        PRINT_FAILURES_ASSERT_FLOAT_EQ();
+        print ("CallCount (FLOAT_EQ) {0}\n").format(ASSERT_FLOAT_EQ_CALLCOUNT())
+        print ("FailureCount (FLOAT_EQ) {0}\n").format(ASSERT_FLOAT_EQ_FAILURECOUNT())
+        PRINT_FAILURES_ASSERT_FLOAT_EQ()
 
-        print ("CallCount (FLOAT_LT) {0}\n").format(ASSERT_FLOAT_LT_CALLCOUNT());
-        print ("FailureCount (FLOAT_LT) {0}\n").format(ASSERT_FLOAT_LT_FAILURECOUNT());
-        PRINT_FAILURES_ASSERT_FLOAT_LT();
+        print ("CallCount (FLOAT_LT) {0}\n").format(ASSERT_FLOAT_LT_CALLCOUNT())
+        print ("FailureCount (FLOAT_LT) {0}\n").format(ASSERT_FLOAT_LT_FAILURECOUNT())
+        PRINT_FAILURES_ASSERT_FLOAT_LT()
             
 # if __name__ == '__main__':
 #     unittest.main()
