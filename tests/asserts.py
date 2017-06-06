@@ -36,7 +36,7 @@ def PRINT_FAILURES_ASSERT_FLOAT_EQ():
         failures = ASSERT_FLOAT_EQ_FAILURECOUNT();
 
     if failures == 0:
-        print("{0}: No failures".format(PRINT_FAILURES_ASSERT_FLOAT_EQ.__name__))
+        print("{0}: No failures".format(sys._getframe().f_code.co_name))
     else:
         for it in range(0,failures):
             head,payload = sendMessage(_hw_addr, 0x000B1A00, 0x00000000, None)
@@ -70,7 +70,7 @@ def PRINT_FAILURES_ASSERT_FLOAT_LT():
         failures = ASSERT_FLOAT_LT_FAILURECOUNT();
 
     if failures == 0:
-        print("{0}: No failures".format(PRINT_FAILURES_ASSERT_FLOAT_LT.__name__))
+        print("{0}: No failures".format(sys._getframe().f_code.co_name))
     else:
         for it in range(0,failures):
             head,payload = sendMessage(_hw_addr, 0x000B2E00, 0x00000000, None)
