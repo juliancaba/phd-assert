@@ -38,11 +38,12 @@ def PRINT_FAILURES_ASSERT_FLOAT_EQ():
     if failures == 0:
         print("{0}: No failures".format(sys._getframe().f_code.co_name))
     else:
+        print("Failures - {0}".format(sys._getframe().f_code.co_name))
         for it in range(0,failures):
             head,payload = sendMessage(_hw_addr, 0x000B1A00, 0x00000000, None)
-            callCount = payload[0]
+            callCount = int(payload[0],16)
             print ("\tcallCount {0}".format(callCount))
-            time = payload[1]
+            time = int(payload[1],16)
             print ("\tTime {0}".format(time))
             expected = ieee754_to_float(payload[2])
             print ("\tExpected {0}".format(expected))
@@ -72,11 +73,12 @@ def PRINT_FAILURES_ASSERT_FLOAT_LT():
     if failures == 0:
         print("{0}: No failures".format(sys._getframe().f_code.co_name))
     else:
+        print("Failures - {0}".format(sys._getframe().f_code.co_name))
         for it in range(0,failures):
             head,payload = sendMessage(_hw_addr, 0x000B2E00, 0x00000000, None)
-            callCount = payload[0]
+            callCount = int(payload[0],16)
             print ("\tcallCount {0}".format(callCount))
-            time = payload[1]
+            time = int(payload[1],16)
             print ("\tTime {0}".format(time))
             expected = ieee754_to_float(payload[2])
             print ("\tExpected {0}".format(expected))
