@@ -48,7 +48,9 @@ class TestL2Norm(TimeTestCase):
         print ("CallCount (FLOAT_LT) {0}".format(ASSERT_FLOAT_LT_CALLCOUNT()))
         print ("FailureCount (FLOAT_LT) {0}".format(ASSERT_FLOAT_LT_FAILURECOUNT()))
         PRINT_FAILURES_ASSERT_FLOAT_LT()
-
+        
+        #self.assertTrue(0 == ASSERT_FLOAT_EQ_FAILURECOUNT())
+        #self.assertTrue(0 == ASSERT_FLOAT_LT_FAILURECOUNT())
         
 
             
