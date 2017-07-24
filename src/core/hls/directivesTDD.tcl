@@ -12,3 +12,4 @@ set_directive_inline "testing_OBJ_l2norm_assert"
 set_directive_inline "readParameters_OBJ_l2norm"
 set_directive_inline "writeReturn_OBJ_l2norm"
 
+

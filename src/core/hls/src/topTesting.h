@@ -12,8 +12,8 @@ static struct headerStruct header_OBJ;
 static hls::stream<unsigned int> bufferRESP_OBJ;
 
 static hls::stream<tASSERT_FLOAT_FAILURE> assertFLOAT_EQ_failures;
-unsigned int assertFLOAT_EQ_callCount = 0;
-unsigned int assertFLOAT_EQ_failureCount = 0;
+static unsigned int assertFLOAT_EQ_callCount = 0;
+static unsigned int assertFLOAT_EQ_failureCount = 0;
 
 static hls::stream<tASSERT_FLOAT_FAILURE> assertFLOAT_LT_failures;
 static unsigned int assertFLOAT_LT_callCount = 0;
