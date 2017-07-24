@@ -1,7 +1,7 @@
 #pext Set the reference directory to where the script is
 set SRCfolder src
 ## recipf
-set SRCfiles [list FIFO_topTesting_assertFLOAT_EQ_failures_V_cal.vhd    topTesting_fcmp_32ns_32ns_1_1.vhd FIFO_topTesting_assertFLOAT_EQ_failures_V_cal_1.vhd  topTesting_fmul_32ns_32ns_32_4_max_dsp.vhd FIFO_topTesting_assertFLOAT_EQ_failures_V_x.vhd      topTesting_forward_OBJ.vhd FIFO_topTesting_assertFLOAT_EQ_failures_V_y.vhd      topTesting_frecip_32ns_32ns_32_10_full_dsp.vhd FIFO_topTesting_assertFLOAT_LT_failures_V_cal.vhd    topTesting_fsqrt_32ns_32ns_32_12.vhd FIFO_topTesting_assertFLOAT_LT_failures_V_cal_1.vhd  topTesting_inputBuffer_OBJ.vhd FIFO_topTesting_assertFLOAT_LT_failures_V_x.vhd      topTesting_l2norm_assert.vhd FIFO_topTesting_assertFLOAT_LT_failures_V_y.vhd      topTesting_l2norm_assert_histAUX_1.vhd FIFO_topTesting_bufferIN_OBJ_V.vhd                   topTesting_manager_OBJ.vhd FIFO_topTesting_bufferOUT_OBJ_V.vhd                  topTesting_manager_OBJ_byteRet_ASSERT_FLOAT_EQ_callCo.vhd FIFO_topTesting_bufferRESP_OBJ_V.vhd                 topTesting_manager_OBJ_byteRet_ASSERT_FLOAT_EQ_failur.vhd topTesting.vhd                                       topTesting_manager_OBJ_words32.vhd topTesting_buildResponse_OBJ.vhd                     topTesting_manager_OBJ_words32_1.vhd topTesting_fadd_32ns_32ns_32_5_full_dsp.vhd          topTesting_outputBuffer_OBJ.vhd]
+set SRCfiles [list FIFO_topTesting_Block_proc_assertFLOAT_EQ_failures_V_cal.vhd topTesting_Block_proc_words32.vhd topTesting_l2norm_assert_histAUX_1.vhd FIFO_topTesting_Block_proc_assertFLOAT_EQ_failures_V_cal_1.vhd topTesting_buildResponse_OBJ.vhd topTesting_running_ASSERT_FLOAT_EQ_callCo.vhd FIFO_topTesting_Block_proc_assertFLOAT_EQ_failures_V_x.vhd topTesting_fadd_32ns_32ns_32_5_full_dsp.vhd topTesting_running_ASSERT_FLOAT_EQ_failur.vhd FIFO_topTesting_Block_proc_assertFLOAT_EQ_failures_V_y.vhd topTesting_fcmp_32ns_32ns_1_1.vhd topTesting_running_ASSERT_FLOAT_EQ_failur_1.vhd FIFO_topTesting_Block_proc_assertFLOAT_LT_failures_V_cal.vhd topTesting_fmul_32ns_32ns_32_4_max_dsp.vhd topTesting_running_ASSERT_FLOAT_LT_callCo.vhd FIFO_topTesting_Block_proc_assertFLOAT_LT_failures_V_cal_1.vhd topTesting_forward_OBJ.vhd topTesting_running_ASSERT_FLOAT_LT_failur.vhd FIFO_topTesting_Block_proc_assertFLOAT_LT_failures_V_x.vhd topTesting_frecip_32ns_32ns_32_10_full_dsp.vhd topTesting_running_ASSERT_FLOAT_LT_failur_1.vhd FIFO_topTesting_Block_proc_assertFLOAT_LT_failures_V_y.vhd topTesting_fsqrt_32ns_32ns_32_12.vhd topTesting_running_ASSERT_FLOAT_LT_failur_1_byteRet_ASSERT_FLOAT_LT_failur_1.vhd FIFO_topTesting_bufferRESP_OBJ_V.vhd topTesting_getRequestHead_OBJ.vhd topTesting_running_ASSERT_FLOAT_LT_failur_byteRet_ASSERT_FLOAT_LT_failur.vhd topTesting.vhd topTesting_getRequestHead_OBJ_words32.vhd topTesting_Block_proc.vhd topTesting_l2norm_assert.vhd]
 
 set SIMfolder sim
 set SIMfiles [list ]
@@ -21,7 +21,8 @@ create_project $prj_name $origin_dir/$prj_name -part $part -force
 # Set project properties
 set obj [get_projects $prj_name]
 #set_property "board_part" "xilinx.com:zc702:part0:0.9" $obj
-set_property "board_part" "xilinx.com:zc702:1.1" $obj
+#set_property "board_part" "xilinx.com:zc702:1.1" $obj
+set_property "board_part" "em.avnet.com:zed:part0:1.2" $obj
 set_property "default_lib" "xil_defaultlib" $obj
 set_property "simulator_language" "Mixed" $obj
 set_property "target_language" "VHDL" $obj
